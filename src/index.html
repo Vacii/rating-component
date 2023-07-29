@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="../dist/output.css" rel="stylesheet">
+  <title>Interactive rating component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <script type = "text/javascript" src="script.js"></script>  
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="font-Overpass bg-[#121417]">
+  <main class="flex justify-center items-center h-full">
+      <!-- Rating state start -->
+    <div class="flex flex-col bg-opacity-40 bg-gradient-to-b from-[#252d37] to-[#1d232b] h-[40%] min-h-[24rem] md:h- w-[22rem] md:w-[25rem] rounded-xl">
+      <div class="flex flex-col h-full justify-around p-6 md:px-8 gap-4">
+        <div class="w-11 h-11 rounded-full flex items-center justify-center bg-[#7c8798] bg-opacity-10">
+          <img src="../images/icon-star.svg" alt="icon-star" class="h-4" />
+        </div>
+        <h1 class="text-2xl font-bold">How did we do?</h1>
+        <p class="text-[#959eac] text-[14px]">
+          Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!
+        </p>
+
+        <div id="rating-choices" class="flex flex-row gap-4 items-center justify-around text-sm">
+          <div id="rating-1" onclick="changeActiveRating(this)" class="w-11 h-11 md:w-12 md:h-12 cursor-pointer rounded-full flex items-center justify-center bg-[#7c8798] bg-opacity-10 rating">
+            <p class="h-4 opacity-40">1</p>
+          </div>
+          <div id="rating-2" onclick="changeActiveRating(this)"  class="w-11 h-11 md:w-12 md:h-12 cursor-pointer rounded-full flex items-center justify-center bg-[#7c8798] bg-opacity-10 rating">
+            <p class="h-4 opacity-40">2</p>
+          </div>
+          <div id="rating-3" onclick="changeActiveRating(this)"  class="w-11 h-11 md:w-12 md:h-12 cursor-pointer rounded-full flex items-center justify-center bg-[#7c8798] bg-opacity-10 rating">
+            <p class="h-4 opacity-40">3</p>
+          </div>
+          <div id="rating-4" onclick="changeActiveRating(this)"  class="w-11 h-11 md:w-12 md:h-12 cursor-pointer rounded-full flex items-center justify-center bg-[#7c8798] bg-opacity-10 rating">
+            <p class="h-4 opacity-40">4</p>
+          </div>
+          <div id="rating-5" onclick="changeActiveRating(this)"  class="w-11 h-11 md:w-12 md:h-12 cursor-pointer rounded-full flex items-center justify-center bg-[#7c8798] bg-opacity-10 rating">
+            <p class="h-4 opacity-40">5</p>
+          </div>
+        </div>
+
+        <button class="h-12 text-sm font-semibold w-full bg-[#fb7413] hover:bg-white hover:text-[#fb7413] rounded-full uppercase align-middle tracking-widest">
+          Submit
+        </button>
+     </div>
+    </div>
+      <!-- Rating state end -->
+  </main>
+
+  <!-- Thank you state start -->
+  <div class="hidden justify-center items-center h-full">
+    <div class="flex flex-col bg-opacity-40 bg-gradient-to-b from-[#252d37] to-[#1d232b] h-[40%] min-h-[24rem] w-[22rem] md:w-[25rem] rounded-xl">
+      <div class="flex flex-col h-full justify-around items-center p-6 md:px-5 gap-3">
+        <div class="flex justify-center">
+          <img src="../images/illustration-thank-you.svg" alt="rating-sent"/>
+        </div>
+        <div class="flex justify-center bg-[#7c8798] bg-opacity-10 py-2 px-3 rounded-full">
+          <p id="selected" class="text-sm text-[#fb7413] opacity-75">You selected 3 out of 5</p>
+        </div>
+        <div class="flex flex-col justify-center text-center gap-3">
+          <p class="text-2xl font-bold">Thank you!</p>
+          <p class="text-[#959eac]">We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!</p>
+        </div>
+      </div>
+    </div>
+    <!-- Thank you state end -->  
+  </div>
+
+  
+  <div class="attribution block fixed bottom-10 left-1/2 translate-x-[-50%]">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Lukáš Václavek</a>.
+  </div>
+</body>
+</html>

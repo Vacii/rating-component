@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Overpass";
+    src: url("https://fonts.google.com/specimen/Overpass");
+  }
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-size: 15px;
+    color: white;
+}
+
+.rating-active {
+  background-color: hsl(217, 12%, 63%);
+}
+
+.rating-active p {
+  opacity: 100%;
+  font-weight: bold;
+}
+
+.rating:hover {
+  background-color: #fb7413;
+  opacity: 100%;
+  font-weight: bold;
+}
+
+.rating:hover p {
+  opacity: 100%;
+  font-weight: bold;
+}
